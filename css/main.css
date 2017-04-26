@@ -1086,6 +1086,16 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1694,7 +1704,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #502662;
+  background: #0eac62;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2543,4 +2553,18 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.site-author-image {
+  margin-top: 50px;
+  width: 105px;
+  max-width: 105px;
+  height: auto;
+  border-radius: 100%;
+  padding: 0;
+  border: none;
+  animation: cycle 2s 0.5s forwards;
+  transition: border-radius 2s;
+}
+.site-author-name {
+  font-size: 16px;
 }

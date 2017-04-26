@@ -4,9 +4,9 @@
   <subtitle>记录点滴</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://baoyuzhang.github.io/"/>
   <updated>2017-04-26T11:31:47.515Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://baoyuzhang.github.io/</id>
   
   <author>
     <name>baoyuzhang</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>test</title>
-    <link href="http://yoursite.com/2017/04/26/test/"/>
-    <id>http://yoursite.com/2017/04/26/test/</id>
+    <link href="https://baoyuzhang.github.io/2017/04/26/test/"/>
+    <id>https://baoyuzhang.github.io/2017/04/26/test/</id>
     <published>2017-04-26T11:31:47.000Z</published>
     <updated>2017-04-26T11:31:47.515Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>my-first-blog</title>
-    <link href="http://yoursite.com/2017/04/26/my-first-blog/"/>
-    <id>http://yoursite.com/2017/04/26/my-first-blog/</id>
+    <link href="https://baoyuzhang.github.io/2017/04/26/my-first-blog/"/>
+    <id>https://baoyuzhang.github.io/2017/04/26/my-first-blog/</id>
     <published>2017-04-26T06:52:09.000Z</published>
     <updated>2017-04-26T11:28:22.884Z</updated>
     
@@ -61,14 +61,14 @@
     
     </summary>
     
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+      <category term="test" scheme="https://baoyuzhang.github.io/categories/test/"/>
     
     
-      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
+      <category term="tag1" scheme="https://baoyuzhang.github.io/tags/tag1/"/>
     
-      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
+      <category term="tag2" scheme="https://baoyuzhang.github.io/tags/tag2/"/>
     
-      <category term="tag3" scheme="http://yoursite.com/tags/tag3/"/>
+      <category term="tag3" scheme="https://baoyuzhang.github.io/tags/tag3/"/>
     
   </entry>
   
