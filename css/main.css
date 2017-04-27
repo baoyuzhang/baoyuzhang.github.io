@@ -958,7 +958,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: transparent;
+  background: url("../header_background.jpg");
 }
 .header-inner {
   position: relative;
@@ -1704,7 +1704,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0eac62;
+  background: #bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2554,6 +2554,12 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
+body {
+  color: rgba(0,0,0,0.9);
+}
+.posts-expand .post-title-link {
+  color: rgba(0,0,0,0.9);
+}
 .site-author-image {
   margin-top: 50px;
   width: 105px;
@@ -2567,4 +2573,26 @@ embed {
 }
 .site-author-name {
   font-size: 16px;
+}
+.brand {
+  color: #fff;
+  background: transparent;
+  font-family: 'Lobster Two', 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.site-title {
+  line-height: 56px;
+  font-size: 40px;
+  color: #f5f5f5;
+  font-family: 'Lobster Two', 'Roboto Slab', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.menu {
+  background: rgba(255,255,255,0.65);
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  border-radius: initial;
+}
+.menu .menu-item a {
+  font-size: 16px;
+  color: rgba(0,0,0,0.9);
 }
