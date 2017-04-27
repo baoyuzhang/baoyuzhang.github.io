@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+    
+    
+    
+  <url>
+    <loc>https://baoyuzhang.github.io/2017/04/26/test/</loc>
+    <lastmod>2017-04-26T11:31:47.515Z</lastmod>
+    <data>
+        <display>
+        <title>test</title>
+        <pubTime>2017-04-26T11:31:47.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://baoyuzhang.github.io/2017/04/26/my-first-blog/</loc>
+    <lastmod>2017-04-26T11:28:22.884Z</lastmod>
+    <data>
+        <display>
+        <title>my-first-blog</title>
+        <pubTime>2017-04-26T06:52:09.000Z</pubTime>
+        
+        <tag>tag1</tag>
+         
+        <tag>tag2</tag>
+         
+        <tag>tag3</tag>
+         
+         
+           
+             
+              <breadCrumb title="test" url="https://baoyuzhang.github.io/categories/test/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
