@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baoyuzhang.github.io/"/>
-  <updated>2017-04-28T02:52:24.238Z</updated>
+  <updated>2017-04-29T10:09:20.190Z</updated>
   <id>https://baoyuzhang.github.io/</id>
   
   <author>
@@ -14,6 +14,827 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Hexo搭建独立博客全纪录】（一）使用Git和Github</title>
+    <link href="https://baoyuzhang.github.io/2017/04/28/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%BD%BF%E7%94%A8Git%E5%92%8CGithub/"/>
+    <id>https://baoyuzhang.github.io/2017/04/28/【Hexo搭建独立博客全纪录】（一）使用Git和Github/</id>
+    <published>2017-04-28T02:57:39.000Z</published>
+    <updated>2017-04-29T10:09:20.190Z</updated>
+    
+    <content type="html"><![CDATA[<p>从开始着手搭建博客，完整的学习Git，Markdown语法，到用Hexo搭建博客成功，再到后期在原有主题的基础增加功能性和视觉上的优化，折腾了三四天，总算看倒腾出了一个看上去基本满意的博客。由于时间关系，还有很多想法没有实现，后面会不断地改进和优化。今天先来说一说学习使用Git和Github。</p>
+<a id="more"></a>
+<p>去年十月第一次接触Github，慕名而来，当时觉得这是一个高的触不可及的平台，我等渣渣还是退下吧…直到今年过完年回来二月份才开始真正使用Github，不熟悉命令行的我对Git Bush是绕着走的，在慕课网上看到Github可以使用友好的图形化客户端来操作，心中一阵窃喜。现在看来，当时真是too young too simple，因为命令行真的是好用啊！而且一点都不难，so easy~当初用客户端还把自己搞得晕晕乎乎的，当时在想这东西这么复杂怎么还这么火，还怀疑自己是不是不适合做程序员…本以为自己走了捷径，却害苦了自己！好了，闲话到此为止，进入正题。</p>
+<p>结论：拒绝客户端，直接学习Git！</p>
+<p>学习Git和Github，我主要是跟着<a href="http://www.cnblogs.com/tugenhua0707/p/4050072.html" target="_blank" rel="external">Git使用教程</a>来做的，文中每一步都有图和解释，超详细，手把手教你使用Git和Github，极力推荐给正在入门的小白！参考该教程、文后的链接和我自己的理解，构成本文的内容。由于目前个人用不到多人协作，因此本文并未提及，如有需要，也请参考<a href="http://www.cnblogs.com/tugenhua0707/p/4050072.html" target="_blank" rel="external">Git使用教程</a>。</p>
+<p>此处列出了一些我收藏的公认的比较好的Git教程，可以作为深入学习资料</p>
+<ul>
+<li><p><a href="http://www.cnblogs.com/tugenhua0707/p/4050072.html" target="_blank" rel="external">Git使用教程</a> 本文主要参考</p>
+</li>
+<li><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a> 大牛博客，还包含JS，Python等教程，都很棒</p>
+</li>
+<li><p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git 使用简易指南</a></p>
+</li>
+<li><p><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解Git</a> 图文并茂，对git工作原理的理解帮助很大</p>
+</li>
+<li><p><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">Git - Book</a></p>
+</li>
+<li><p><a href="https://guides.github.com/" target="_blank" rel="external">GitHub Guides</a> GitHub官方指南，很多都有中文翻译，可以自己搜一下</p>
+</li>
+<li><p><a href="http://gitbeijing.com/flow/" target="_blank" rel="external">理解 GitHub Flow · GitHub 指南</a> 理解Github工作原理，GitHub官方指南中文翻译的一部分</p>
+</li>
+</ul>
+<h2 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h2><h3 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h3><p>Git是目前世界上最先进的分布式版本控制系统。</p>
+<h3 id="SVN（集中式）与Git（分布式）的最主要的区别？"><a href="#SVN（集中式）与Git（分布式）的最主要的区别？" class="headerlink" title="SVN（集中式）与Git（分布式）的最主要的区别？"></a>SVN（集中式）与Git（分布式）的最主要的区别？</h3><p>SVN是集中式版本控制系统，版本库集中放在中央服务器。干活的时候用自己的电脑，首先要从中央服务器哪里得到最新的版本，然后干活，干完后把自己做完的活推送到中央服务器。集中式版本控制系统必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如果在互联网下，如果网速慢的话，就难办了。</p>
+<p>Git是分布式版本控制系统，没有中央服务器。每个人的电脑就是一个完整的版本库，工作的时候不需要联网。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们俩只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+<h2 id="安装Git（windows）"><a href="#安装Git（windows）" class="headerlink" title="安装Git（windows）"></a>安装Git（windows）</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>建议到<a href="https://git-scm.com/" target="_blank" rel="external">Git官网</a>下载最新版本，国内访问会很慢，可以到网上搜索下载，然后默认安装即可。安装完成后，在开始菜单里面找到 “Git –&gt; Git Bash”，如下：<br><img src="/img/01.jpg" alt="&quot;Git --&gt; Git Bash&quot;"></p>
+<p>弹出一个类似的命令窗口的东西，就说明Git安装成功。如下：<br><img src="/img/2017-04-28_165817.png" alt="&quot;git安装成功&quot;"></p>
+<h3 id="设置用户名和邮箱"><a href="#设置用户名和邮箱" class="headerlink" title="设置用户名和邮箱"></a>设置用户名和邮箱</h3><p>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为一个标识。在命令行输入如下：<br><img src="/img/2017-04-28_171200.png" alt="&quot;设置邮箱和用户名&quot;"></p>
+<p><strong>注意！</strong><code>git config  --global</code> 参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。</p>
+<p>查看已设置的用户名和邮箱，在命令行输入如下：<br><img src="/img/2017-04-28_171259.png" alt="&quot;查看邮箱和用户名&quot;"></p>
+<h2 id="使用Git"><a href="#使用Git" class="headerlink" title="使用Git"></a>使用Git</h2><h3 id="创建版本库repository"><a href="#创建版本库repository" class="headerlink" title="创建版本库repository"></a>创建版本库repository</h3><p>版本库：又名仓库，英文名repository。可简单的理解一个目录，这个目录里面的所有文件都会被Git管理，每个文件的修改，删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻还可以将文件“还原”。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>打开所在目录</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>cd folder</td>
+<td>打开文件夹</td>
+</tr>
+<tr>
+<td>mkdir folder</td>
+<td>新建文件夹</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前目录</td>
+</tr>
+<tr>
+<td><strong>初始化：将当前目录变为git仓库</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>git init</td>
+<td>当前目录→git可管理仓库</td>
+</tr>
+<tr>
+<td><strong>添加文件到版本库</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>git add file</td>
+<td>将file文件添加到暂存区</td>
+</tr>
+<tr>
+<td>git commit -m “提交说明”</td>
+<td>将暂存区中所有文件提交到仓库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看当前目录中是否有文件未提交</td>
+</tr>
+</tbody>
+</table>
+<h4 id="打开所在目录"><a href="#打开所在目录" class="headerlink" title="打开所在目录"></a>打开所在目录</h4><p>创建一个版本库，如在D:/www下 目录下新建一个testgit版本库，在命令行输入如下：<br><img src="/img/2017-04-28_173436.png" alt="&quot;创建版本库&quot;"></p>
+<h4 id="初始化：将当前目录变为git仓库"><a href="#初始化：将当前目录变为git仓库" class="headerlink" title="初始化：将当前目录变为git仓库"></a>初始化：将当前目录变为git仓库</h4><p><img src="/img/2017-04-28_174138.png" alt="&quot;初始化&quot;"></p>
+<p><strong>注意！</strong> 这时当前testgit目录下会多一个.git的目录，这个目录是Git来跟踪管理版本的，千万不要手动乱改这个目录里面的文件，否则，会把git仓库给破坏了。如下：<br><img src="/img/2017-04-28_174458.png" alt="&quot;.git&quot;"></p>
+<h4 id="添加文件到版本库"><a href="#添加文件到版本库" class="headerlink" title="添加文件到版本库"></a>添加文件到版本库</h4><p>作为测试，在当前目录下新建一个readme.txt，并写入11111111保存，之后进行如下3步操作：<br><img src="/img/2017-04-28_180144.png" alt="&quot;添加文件到版本库&quot;"></p>
+<p><code>git status</code> 结果显示没有任何文件未提交。</p>
+<h3 id="修改和版本回退"><a href="#修改和版本回退" class="headerlink" title="修改和版本回退"></a>修改和版本回退</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>修改文件内容</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>git diff file</td>
+<td>查看file文件修改内容</td>
+</tr>
+<tr>
+<td><strong>查看历史记录</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>git log</td>
+<td>查看历史记录</td>
+</tr>
+<tr>
+<td>git log –pretty=oneline</td>
+<td>查看历史记录（简洁版）</td>
+</tr>
+<tr>
+<td><strong>版本回退</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>git reset –hard HEAD^</td>
+<td>退回到上个版本</td>
+</tr>
+<tr>
+<td>git reset –hard HEAD^^</td>
+<td>退回到上上个版本</td>
+</tr>
+<tr>
+<td>git reset –hard HEAD~100</td>
+<td>退回到前100个版本</td>
+</tr>
+<tr>
+<td><strong>恢复最新版本</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>获取全部版本号</td>
+</tr>
+<tr>
+<td>git reset –hard 版本号</td>
+<td>退回到版本号的版本</td>
+</tr>
+<tr>
+<td>cat file</td>
+<td>查看文件内容</td>
+</tr>
+</tbody>
+</table>
+<h4 id="修改文件内容"><a href="#修改文件内容" class="headerlink" title="修改文件内容"></a>修改文件内容</h4><p>继续，修改readme.txt内容，在下面添加一行22222222内容，继续使用git status查看结果，如下：<br><img src="/img/2017-04-28_211211.png" alt="&quot;git status&quot;"></p>
+<p> 结果显示，readme.txt文件已被修改，但是未被提交的修改。接下来我想看下readme.txt文件到底改了什么内容，如何查看呢？可以使用如下命令：<br> <img src="/img/2017-04-28_211553.png" alt="&quot;git diff&quot;"></p>
+<p> 结果显示，readme.txt文件内容从一行11111111改成两行，添加了一行22222222内容。</p>
+<p> 知道了对readme.txt文件做了什么修改后，我们可以放心的提交到仓库了，提交修改和提交文件是一样的两步(第一步是git add  第二步是：git commit)。如下：<br> <img src="/img/2017-04-28_212240.png" alt="&quot;增加222&quot;"></p>
+<p><code>git status</code>：提交文件之前，查看一下状态；提交文件之后，继续查看一下状态，显示没有可提交的文件</p>
+<p><strong>说明：</strong> 所有的版本控制系统，只能跟踪文本文件的改动（如txt文件，网页，所有程序的代码等）。对于图片，视频这些二进制文件，只能把每次改动串起来，无法跟踪文件的变化，即：知道图片从1kb变成2kb，但是到底改了什么，版本控制系统也不知道</p>
+<h4 id="查看历史记录"><a href="#查看历史记录" class="headerlink" title="查看历史记录"></a>查看历史记录</h4><p>继续对readme.txt文件进行修改，再增加一行<br>内容为33333333，然后执行命令如下：<br><img src="/img/2017-04-28_213243.png" alt="&quot;增加333内容&quot;"></p>
+<p>现在我已经对readme.txt文件做了三次修改了，那么我现在想查看下历史记录，如何查看呢？使用命令 <code>git log</code> ,如下：<br><img src="/img/2017-04-28_213915.png" alt="&quot;git log&quot;"></p>
+<p>结果显示，从最近到最远的显示日志，我们可以看到最近三次提交，最近的一次是“增加333内容”，上一次是“增加222内容”。</p>
+<p>如果嫌上面显示的信息太多的话，可以用缩减版显示，如下：<br><img src="/img/2017-04-28_214341.png" alt="&quot;git log --pretty=oneline&quot;"></p>
+<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>现在我想使用版本回退操作，我想把当前的版本回退到上一个版本，要使用什么命令呢？可以使用如下2种命令，第一种是<code>git reset  --hard HEAD^</code> ；那么如果要回退到上上个版本只需把<code>HEAD^ 改成 HEAD^^</code>， 以此类推。那如果要回退到前100个版本的话，使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：<code>git reset  --hard HEAD~100</code> 即可。未回退之前的readme.txt内容如下：<br><img src="/img/2017-04-28_214610.png" alt="&quot;未回退内容&quot;"></p>
+<p>回退到上一个版本，如下<br><img src="/img/2017-04-28_214824.png" alt="&quot;回退到上一个版本&quot;"></p>
+<p>查看现在readme.txt文件中的内容，如下：<br><img src="/img/2017-04-28_214936.png" alt="&quot;查看内容&quot;"></p>
+<p>结果显示，”增加333内容”我们没有看到了。</p>
+<h4 id="恢复最新版本"><a href="#恢复最新版本" class="headerlink" title="恢复最新版本"></a>恢复最新版本</h4><p>现在我想恢复到最新的版本(有333333内容版本)要如何恢复呢？可以通过版本号回退。</p>
+<p>但是现在的问题假如我已经关掉过一次git bush，或者333内容的版本号我并不知道呢？要如何知道增加3333内容的版本号呢？如下：<br><img src="/img/2017-04-28_215744.png" alt="&quot;查看版本号&quot;"></p>
+<p>结果显示，”增加333内容”的版本号是 c83a6bb。现在可以通过版本号回退了，如下：<br><img src="/img/2017-04-28_220020.png" alt="&quot;版本号回退&quot;"></p>
+<p>结果显示，目前已经是最新的版本。</p>
+<h4 id="理解工作区、暂存区、版本库"><a href="#理解工作区、暂存区、版本库" class="headerlink" title="理解工作区、暂存区、版本库"></a>理解工作区、暂存区、版本库</h4><p><strong>工作区：</strong> 你在电脑上看到的目录，比如目录testgit里的文件(.git隐藏目录版本库除外)，以后需要再新建的目录文件等等都属于工作区范畴。</p>
+<p><strong>版本库：</strong> 工作区里的隐藏目录.git，这个不属于工作区，这是版本库。版本库中存了很多东西：</p>
+<ul>
+<li><strong>暂存区(stage)</strong> ——最重要！（暂存区是版本库的一部分）</li>
+<li>Git为我们自动创建了第一个分支master</li>
+<li>指向当前分支的指针HEAD</li>
+</ul>
+<p>前面说过使用Git提交文件到版本库有两步：</p>
+<ul>
+<li><p>第一步：<code>git add</code> 把文件添加进去，实际上就是把文件添加到暂存区；</p>
+</li>
+<li><p>第二步：<code>git commit</code> 提交更改，实际上就是把暂存区的所有内容提交到当前分支上。</p>
+</li>
+</ul>
+<p>下面来举例说明。</p>
+<p>在readme.txt再添加一行内容为4444444，接着在目录下新建一个文件为test.txt 内容为test，我们先用命令<code>git status</code>来查看下状态，如下：<br><img src="/img/2017-04-28_222758.png" alt="&quot;工作区、暂存区、版本库&quot;"></p>
+<p>先使用git add 命令把2个文件都添加到暂存区中，再使用git status来查看下状态，如下：<br><img src="/img/2017-04-28_223111.png" alt="&quot;git add&quot;"></p>
+<p>接着使用git commit一次性提交到分支上，如下：<br><img src="/img/2017-04-28_223236.png" alt="&quot;一次性提交所有文件&quot;"></p>
+<h3 id="撤销修改、删除和恢复文件"><a href="#撤销修改、删除和恢复文件" class="headerlink" title="撤销修改、删除和恢复文件"></a>撤销修改、删除和恢复文件</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>释义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>撤销修改</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git checkout – file</td>
+<td>丢弃file文件在工作区的修改（工作区-暂存区-版本库，回到上一阶段的修改）a.工作区修改后没有add到暂存区：回到和版本库一样的状态；b.工作区修改后add到暂存区后又有修改：回到添加暂存区后的状态</td>
+<td>如果没有–，则为创建分支命令</td>
+</tr>
+<tr>
+<td><strong>删除和恢复文件</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rm file</td>
+<td>删除工作区中的file文件</td>
+<td>a.想要删除版本库中的file文件：直接commit掉；b.想要从版本库中删除file文件：git checkout – file</td>
+</tr>
+<tr>
+<td>git checkout – file</td>
+<td>丢弃file文件在工作区的修改（工作区-暂存区-版本库，回到上一阶段的修改）a.工作区修改后没有add到暂存区：回到和版本库一样的状态；b.工作区修改后add到暂存区后又有修改：回到添加暂存区后的状态</td>
+<td>如果没有–，则为创建分支命令</td>
+</tr>
+</tbody>
+</table>
+<h4 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h4><p>现在在readme.txt文件里面增加一行内容为55555555，通过命令查看如下：<br><img src="/img/2017-04-28_223816.png" alt="&quot;修改555&quot;"></p>
+<p>在未提交之前，我发现添加55555555内容有误，得马上恢复以前的版本，现在我可以有如下几种方法可以做修改：</p>
+<ol>
+<li><p>如果知道要删掉哪些内容，直接手动更改去掉那些需要的文件，然后add添加到暂存区，最后commit。</p>
+</li>
+<li><p>按以前的方法直接恢复到上一个版本。使用 <code>git reset  --hard HEAD^</code></p>
+</li>
+</ol>
+<p>但是现在我不想使用以上两种方法，想直接使用撤销命令该如何操作呢？首先在做撤销之前，我们可以先用 git status 查看下当前的状态，如下：<br><img src="/img/2017-04-28_224044.png" alt="&quot;git status&quot;"></p>
+<p>可以发现，Git会告诉你，<code>git checkout  -- file</code> 可以将工作区做的修改全部撤销，如下:<br><img src="/img/2017-04-28_224304.png" alt="&quot;git checkout&quot;"></p>
+<p><strong>注意：</strong> <code>git checkout -- readme.txt</code> 中的 <code>--</code> 很重要.如果没有 <code>--</code> ，则命令变成创建分支了。</p>
+<p>结果显示，内容555已结没有了。将工作区做的修改全部撤销有两种情况：</p>
+<ol>
+<li>修改后还没有放到暂存区：撤销修改则回到和版本库一模一样的状态；</li>
+<li>已经放入暂存区，接着又作了修改：撤销修改则回到添加暂存区后的状态。</li>
+</ol>
+<p>对于第2种情况，继续做demo，假如现在对readme.txt添加一行内容为66666666，git add 增加到暂存区，如下：<br><img src="/img/2017-04-28_225212.png" alt="&quot;add 666&quot;"></p>
+<p>接着添加内容77777777，通过撤销命令让其回到暂存区后的状态。如下：<br><img src="/img/2017-04-28_225241.png" alt="&quot;撤销777&quot;"></p>
+<h4 id="删除和恢复文件"><a href="#删除和恢复文件" class="headerlink" title="删除和恢复文件"></a>删除和恢复文件</h4><p> 假如现在版本库testgit目录添加一个文件a.txt，然后提交。如下：<br> <img src="/img/2017-04-28_230315.png" alt="&quot;添加a.txt&quot;"></p>
+<p>一般情况下，删除文件有两种方法：</p>
+<ol>
+<li>直接在文件目录中删除文件text.txt</li>
+<li>使用命令<code>rm a.txt</code></li>
+</ol>
+<p>如下：<br><img src="/img/2017-04-28_230736.png" alt="&quot;删除a.txt、test.txt&quot;"></p>
+<p>当前目录是这样的:<br><img src="/img/2017-04-28_230825.png" alt="&quot;当前目录&quot;"></p>
+<p>如果想彻底从版本库中删掉了此文件的话，可以再执行commit命令提交掉。没有commit之前，想在版本库中恢复此文件如何操作呢？如下：<br><img src="/img/2017-04-28_231517.png" alt="&quot;提交a.txt、test.txt&quot;"></p>
+<p>再来看testgit目录，添加了2个文件，如下：<br><img src="/img/2017-04-28_231617.png" alt="&quot;当前目录&quot;"></p>
+<h3 id="创建、合并分支"><a href="#创建、合并分支" class="headerlink" title="创建、合并分支"></a>创建、合并分支</h3><h4 id="理解HEAD和master指针"><a href="#理解HEAD和master指针" class="headerlink" title="理解HEAD和master指针"></a>理解HEAD和master指针</h4><p>你已经知道，在版本回退里，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。严格来说，HEAD并不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
+<p><strong>结论：HEAD指向当前分支，master指向提交</strong></p>
+<h4 id="理解分支管理策略"><a href="#理解分支管理策略" class="headerlink" title="理解分支管理策略"></a>理解分支管理策略</h4><p><strong>master主分支：用来发布新版本，应该是非常稳定的。一般情况下不允许在上面干活。</strong><br><strong>一般情况下在新建的dev分支上干活，干完后，要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>释义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>创建、合并分支</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git branch</td>
+<td>查看分支</td>
+<td>列出所有分支，当前分支前有星号</td>
+</tr>
+<tr>
+<td>git branch xxx</td>
+<td>创建分支xxx</td>
+<td></td>
+</tr>
+<tr>
+<td>git checkout xxx</td>
+<td>切换到分支xxx</td>
+<td></td>
+</tr>
+<tr>
+<td>git checkout -b xxx</td>
+<td>创建 + 切换分支xxx</td>
+<td>相当于<code>git branch xxx</code>和<code>git checkout xxx</code></td>
+</tr>
+<tr>
+<td>git merge xxx</td>
+<td>在主分支上合并xxx分支</td>
+<td>“Fast-forward“快进模式”：直接把master指向xxx的当前提交；删除分支后，丢掉分支信息CONFLICT：产生冲突；删除分支后，保留分支信息”</td>
+</tr>
+<tr>
+<td>git branch -d xxx</td>
+<td>删除分支xxx</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>解决冲突</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git log –graph –pretty=oneline –abbrev-commit</td>
+<td>带参数的git log，查看分支合并图</td>
+<td>删除分支后，保留分支信息</td>
+</tr>
+<tr>
+<td><strong>“Fast forward”模式 no-ff</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git merge –no-ff -m “merge with no-ff” xxx</td>
+<td>合并分支xxx，–no-ff：禁用Fast-forward“快进模式”</td>
+<td>删除分支后，保留分支信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="创建、合并分支-1"><a href="#创建、合并分支-1" class="headerlink" title="创建、合并分支"></a>创建、合并分支</h4><p>首先，我们来创建并切换到dev分支上，然后查看当前分支，如下：<br><img src="/img/2017-04-29_110228.png" alt="&quot;创建并切换到dev分支&quot;"></p>
+<p><code>git checkout -b xxx</code>表示创建 + 切换分支，相当于<code>git branch xxx</code>和<code>git checkout xxx</code>。</p>
+<p><code>git branch</code>表示查看分支，列出所有分支，当前分支前有星号。</p>
+<p>首先我们来查看下readme.txt内容，接着添加内容77777777，再次查看内容并提交，如下：<br><img src="/img/2017-04-29_111013.png" alt="&quot;dev分支增加777&quot;"></p>
+<p>dev分支工作已完成，现在切换到主分支master上，继续查看readme.txt内容，如下：<br><img src="/img/2017-04-29_111235.png" alt="&quot;切换到主分支&quot;"></p>
+<p>我们发现内容777不见了，因为已经由dev分支切换到主分支了，主分支并没有增加777内容。现在我们把dev分支上的内容合并到分支master上，在master分支上，使用<code>git merge dev</code>，继续查看内容。如下：<br><img src="/img/2017-04-29_111547.png" alt="&quot;合并分支&quot;"></p>
+<p>我们发现多了一条777，和dev分支最新的提交完全一样。</p>
+<p><strong>注意！</strong> merge后显示的Fast-forward信息，表示这次合并是“快进模式”，即，直接把master指向dev的当前提交，合并速度非常快。</p>
+<p>合并完成后，可以删除dev分支，如下：<br><img src="/img/2017-04-29_112129.png" alt="&quot;删除分支&quot;"></p>
+<p>查看分支，发现只剩下主分支master了。</p>
+<h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><p>那么如何解决冲突呢？我们还是一步一步来，先新建一个新分支fenzhi1，在readme.txt添加一行内容8888888，然后提交，如下：<br><img src="/img/2017-04-29_112708.png" alt="&quot;fenzhi1分支添加888&quot;"></p>
+<p>接着切换到master分支上，在最后一行添加内容99999999，如下：<br><img src="/img/2017-04-29_112957.png" alt="&quot;主分支添加999&quot;"></p>
+<p>现在，在master分支上合并fenzhi1，如下：<br><img src="/img/2017-04-29_113150.png" alt="&quot;主分支上合并fenzhi1&quot;"></p>
+<p>发现发生了冲突CONFLICT，git bush中显示分支的地方也变成了(master|MERGING)。查看状态和readme.txt内容，如下：<br><img src="/img/2017-04-29_113734.png" alt="&quot;查看状态和内容&quot;"><br><img src="/img/2017-04-29_114045.png" alt="&quot;查看状态和内容&quot;"></p>
+<p>Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容。</p>
+<ul>
+<li><code>&lt;&lt;&lt;HEAD</code> ：主分支修改的内容</li>
+<li><code>&gt;&gt;&gt;&gt;&gt;fenzhi1</code> ：fenzhi1上修改的内容</li>
+</ul>
+<p>修改readme.txt内容后，保存并提交，如下：<br><img src="/img/2017-04-29_114214.png" alt="&quot;修改readme.txt内容&quot;"><br><img src="/img/2017-04-29_115156.png" alt="&quot;修改readme.txt内容&quot;"></p>
+<p>发现显示分支的地方变回了(master)。如果想要查看分支合并的情况，需要使用命令 <code>git log</code>命令，如下：<br><img src="/img/2017-04-29_115518.png" alt="&quot;git log&quot;"></p>
+<p><code>git log</code>展示的信息量太大，一片文字看不过来，使用<code>git log --graph --pretty=oneline --abbrev-commit</code>命令可以显示分支合并图，如下：<br><img src="/img/2017-04-29_120112.png" alt="&quot;分支合并图&quot;"></p>
+<h4 id="“Fast-forward”模式-no-ff"><a href="#“Fast-forward”模式-no-ff" class="headerlink" title="“Fast forward”模式 no-ff"></a>“Fast forward”模式 no-ff</h4><p>通常合并分支时，git一般使用”Fast forward”模式，在这种模式下，删除分支后，会丢掉分支信息。</p>
+<p>现在我们来使用带参数 –no-ff来禁用”Fast forward”模式。来做demo演示下：</p>
+<ol>
+<li>创建一个dev分支</li>
+<li>修改readme.txt内容，增加aaa</li>
+<li>添加到暂存区</li>
+<li>切换回主分支(master)</li>
+<li>合并dev分支，使用命令 <code>git merge -–no-ff  -m “注释” dev</code></li>
+<li>删除dev分支</li>
+<li>查看分支</li>
+<li>查看历史记录</li>
+</ol>
+<p>如下：<br><img src="/img/2017-04-29_142402.png" alt="&quot;no-ff&quot;"></p>
+<h3 id="bug分支"><a href="#bug分支" class="headerlink" title="bug分支"></a>bug分支</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>b释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git stash</td>
+<td>隐藏当前分支的工作现场</td>
+</tr>
+<tr>
+<td>git stash list</td>
+<td>查看stash隐藏的内容</td>
+</tr>
+<tr>
+<td>git stash apply</td>
+<td>恢复stash隐藏内容</td>
+</tr>
+<tr>
+<td>git stash drop</td>
+<td>删除stash内容</td>
+</tr>
+<tr>
+<td>git stash pop</td>
+<td>恢复并删除stash隐藏内容</td>
+</tr>
+</tbody>
+</table>
+<p>在开发中，会经常碰到bug问题，那么有了bug就需要修复，在Git中，分支是很强大的，每个bug都可以通过一个临时分支来修复，修复完成后，合并分支，然后将临时的分支删除掉。</p>
+<p>来做demo演示：新建dev分支，在readme.txt中增加bbb。此时接到一个404 bug，我们可以创建一个404分支来修复它，但是，当前的dev分支上的工作还没有提交。如下：<br><img src="/img/2017-04-29_144313.png" alt="&quot;遇到404 bug&quot;"></p>
+<p>并不是我不想提交，而是工作进行到一半时候，我们还无法提交，比如我这个分支bug要2天完成，但是我issue-404 bug需要5个小时内完成。怎么办呢？还好，Git还提供了一个stash功能，可以把当前工作现场 ”隐藏起来”，等以后恢复现场后继续工作。如下：<br><img src="/img/2017-04-29_144452.png" alt="&quot;stash隐藏工作现场&quot;"></p>
+<p>查看状态显示，<code>nothing to commit, working directory clean</code>，说明工作现场已被隐藏。现在可以通过创建issue-404分支来修复bug了。</p>
+<p>首先要确定在哪个分支上修复bug。假设我现在要在主分支master上修复，那么要切换到主分支master，然后创建一个临时分支issue-404，如下：<br><img src="/img/2017-04-29_145356.png" alt="&quot;临时分支issue-404&quot;"></p>
+<p>修复404bug：将最后一行aaa改为404fixed，然后提交，如下：<br><img src="/img/2017-04-29_145603.png" alt="&quot;修复404bug&quot;"></p>
+<p>修复完成，切换到master分支上，并完成合并，最后删除issue-404分支。如下：<br><img src="/img/2017-04-29_145845.png" alt="&quot;完成合并，删除issue-404分支&quot;"></p>
+<p>现在，可以回到dev分支上干活了。<br><img src="/img/2017-04-29_150024.png" alt="&quot;回到dev分支&quot;"></p>
+<p>查看状态表明，现在的工作区是干净的。那么我们工作现场去哪里呢？我们可以使用命令 git stash list来查看下。如下：<br><img src="/img/2017-04-29_150228.png" alt="&quot;git stash list&quot;"></p>
+<p>工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，可以使用如下2个方法：</p>
+<ol>
+<li>git stash apply恢复。恢复后，stash内容并不删除，你需要使用命令git stash drop来删除</li>
+<li>使用git stash pop。恢复的同时把stash内容也删除了</li>
+</ol>
+<p>如下：<br><img src="/img/2017-04-29_151622.png" alt="&quot;恢复工作区&quot;"></p>
+<p>这样就恢复了之前的工作区，可以继续dev分支的工作了。</p>
+<h2 id="Github远程仓库"><a href="#Github远程仓库" class="headerlink" title="Github远程仓库"></a>Github远程仓库</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>b释义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>创建SSH Key</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ssh-keygen -t rsa –C “youremail@example.com”</td>
+<td>创建SSH Key</td>
+<td>id_rsa是私钥，不能泄露出去;id_rsa.pub是公钥，可以放心地告诉任何人”</td>
+</tr>
+<tr>
+<td><strong>Github中添加SSH Key</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>添加远程库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>a.先创建本地git仓库，再创建github仓库，两个仓库同步</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git remote add origin <a href="https://github.com/xxx/xxx.git" target="_blank" rel="external">https://github.com/xxx/xxx.git</a></td>
+<td>添加github地址</td>
+<td></td>
+</tr>
+<tr>
+<td>git push -u origin master</td>
+<td>第一次使用时执行该命令，将本地的master分支和远程的master分支关联起来，并把将其推送到远程”</td>
+<td></td>
+</tr>
+<tr>
+<td>git push origin master</td>
+<td>将本地master分支的最新修改推送到github</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>b.先创建github仓库，再从github仓库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git clone <a href="https://github.com/xxx/xxx" target="_blank" rel="external">https://github.com/xxx/xxx</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>先注册github账号，由于你的本地Git仓库和github仓库之间的传输是通过SSH加密的，所以需要设置SSH Key。</p>
+<h3 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h3><p>查看是否已经有ssh密钥：<br>打开用户主目录”C:\Users\Administrator.hp-PC”，<br>看看有没有.ssh目录。</p>
+<ul>
+<li>如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件。如果有，可以直接跳至下一小节</li>
+<li><p>如果已经有ssh密钥，想要重新生成ssh密钥，需要清理原有ssh密钥：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mkdir key_backup</div><div class="line">$ cp id_rsa* key_backup</div><div class="line">$ rm id_rsa*</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果没有，打开命令行，输入命令<code>ssh-keygen  -t rsa –C “youremail@example.com”</code>。此处的邮箱地址，你可以输入自己的邮箱地址。在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。</p>
+<p>由于我本地此前运行过一次，所以本地有，如下所示：</p>
+</li>
+</ul>
+<p><img src="/img/2017-04-29_153448.png" alt="&quot;.ssh&quot;"></p>
+<p>id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。由于之前使用Github客户端，因此还有github_rsa和github_rsa.pub两个文件。known_hosts文件如果没有暂时不管。</p>
+<p>验证是否连接成功，连接成功显示<code>Hi baoyuzhang! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>。如下：<br><img src="/img/2017-04-29_160356.png" alt="&quot;验证是否连接成功&quot;"></p>
+<h3 id="Github中添加SSH-Key"><a href="#Github中添加SSH-Key" class="headerlink" title="Github中添加SSH Key"></a>Github中添加SSH Key</h3><p>登录github，点击个人头像打开”settings”，再打开”SSH and GPG keys”页面，然后点击”New SSH Key”，填上任意title，在”Key”文本框里黏贴id_rsa.pub文件的内容，点击 Add Key，你就应该可以看到已经添加的key。如下：<br><img src="/img/2017-04-29_155435.png" alt="&quot;Github中添加SSH Key&quot;"></p>
+<h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><h4 id="先创建本地git仓库，再创建github仓库，两个仓库同步"><a href="#先创建本地git仓库，再创建github仓库，两个仓库同步" class="headerlink" title="先创建本地git仓库，再创建github仓库，两个仓库同步"></a>先创建本地git仓库，再创建github仓库，两个仓库同步</h4><p>现在的情景是：我们已经在本地创建了一个Git仓库后，又想在github创建一个Git仓库，并且希望这两个仓库进行远程同步，这样github的仓库可以作为备份，又可以其他人通过该仓库来协作。</p>
+<p>首先，登录github上，然后在右上角点击”+”找到”New repository”创建一个新的仓库。如下：<br><img src="/img/2017-04-29_161046.png" alt="&quot;create a new repo&quot;"><br><img src="/img/2017-04-29_161331.png" alt="&quot;create a new repo&quot;"></p>
+<p>在Repository name填入testgit，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库：<br><img src="/img/2017-04-29_161433.png" alt="&quot;new repo&quot;"></p>
+<p>目前，在GitHub上的这个testgit仓库还是空的。现在把已有的本地仓库testgit与之关联，然后，把本地仓库的内容推送到GitHub仓库。<br><img src="/img/2017-04-29_162558.png" alt="&quot;推送到GitHub仓库&quot;"></p>
+<p>把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。推送成功后，可以立刻在github页面中看到远程库的内容已经和本地一模一样了：<br><img src="/img/2017-04-29_163139.png" alt="&quot;一模一样&quot;"></p>
+<p>从现在起，只要本地作了提交，通过命令<code>git push origin master</code>就可以把本地master分支的最新修改推送到github上了，现在你就拥有了真正的分布式版本库了。</p>
+<h4 id="先创建github仓库，再从github仓库克隆"><a href="#先创建github仓库，再从github仓库克隆" class="headerlink" title="先创建github仓库，再从github仓库克隆"></a>先创建github仓库，再从github仓库克隆</h4><p>上面我们了解了先有本地库，后有远程库时候，如何关联远程库。现在我们想，假如远程库有新的内容了，我想克隆到本地来 如何克隆呢？</p>
+<p>首先，登录github，创建一个新的仓库，名字叫testgit2.如下：<br><img src="/img/2017-04-29_161046.png" alt="&quot;create a new repo&quot;"><br><img src="/img/2017-04-29_163601.png" alt="&quot;create a new repo&quot;"><br><img src="/img/2017-04-29_163651.png" alt="&quot;create a new repo&quot;"></p>
+<p>现在，远程库已经准备好了，下一步是使用命令git clone克隆一个本地库了。如下：<br><img src="/img/2017-04-29_164025.png" alt="&quot;克隆一个本地库&quot;"><br>在本地目录就生成了testgit2目录，如下：<br><img src="/img/2017-04-29_164053.png" alt="&quot;克隆一个本地库&quot;"></p>
+<h2 id="Git常用指令"><a href="#Git常用指令" class="headerlink" title="Git常用指令"></a>Git常用指令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>b释义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.创建版本库repository</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>打开所在目录</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cd folder</td>
+<td>打开文件夹</td>
+<td></td>
+</tr>
+<tr>
+<td>mkdir folder</td>
+<td>新建文件夹</td>
+<td></td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前目录</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>初始化：将当前目录变为git仓库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git init</td>
+<td>当前目录→git可管理仓库</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>添加文件到版本库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git add file</td>
+<td>将file文件添加到暂存区</td>
+<td></td>
+</tr>
+<tr>
+<td>git commit -m “提交说明”</td>
+<td>将暂存区中所有文件提交到仓库</td>
+<td></td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看当前目录中是否有文件未提交</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2.修改和版本回退</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>修改文件内容</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git diff file</td>
+<td>查看file文件修改内容</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>查看历史记录</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git log</td>
+<td>查看历史记录</td>
+<td></td>
+</tr>
+<tr>
+<td>git log –pretty=oneline</td>
+<td>查看历史记录（简洁版）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>版本回退</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git reset –hard HEAD^</td>
+<td>退回到上个版本</td>
+<td></td>
+</tr>
+<tr>
+<td>git reset –hard HEAD^^</td>
+<td>退回到上上个版本</td>
+<td></td>
+</tr>
+<tr>
+<td>git reset –hard HEAD~100</td>
+<td>退回到前100个版本</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>恢复最新版本</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>获取全部版本号</td>
+<td></td>
+</tr>
+<tr>
+<td>git reset –hard 版本号</td>
+<td>退回到版本号的版本</td>
+<td></td>
+</tr>
+<tr>
+<td>cat file</td>
+<td>查看文件内容</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>3.撤销修改、删除文件、恢复文件</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>撤销修改</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git checkout – file</td>
+<td>丢弃file文件在工作区的修改（工作区-暂存区-版本库，回到上一阶段的修改）a.工作区修改后没有add到暂存区：回到和版本库一样的状态；b.工作区修改后add到暂存区后又有修改：回到添加暂存区后的状态</td>
+<td>如果没有–，则为创建分支命令</td>
+</tr>
+<tr>
+<td><strong>删除和恢复文件</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rm file</td>
+<td>删除工作区中的file文件</td>
+<td>a.想要删除版本库中的file文件：直接commit掉；b.想要从版本库中删除file文件：git checkout – file</td>
+</tr>
+<tr>
+<td>git checkout – file</td>
+<td>丢弃file文件在工作区的修改（工作区-暂存区-版本库，回到上一阶段的修改）a.工作区修改后没有add到暂存区：回到和版本库一样的状态；b.工作区修改后add到暂存区后又有修改：回到添加暂存区后的状态</td>
+<td>如果没有–，则为创建分支命令</td>
+</tr>
+<tr>
+<td><strong>4.创建、合并分支</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>创建、合并分支</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git branch</td>
+<td>查看分支</td>
+<td>列出所有分支，当前分支前有星号</td>
+</tr>
+<tr>
+<td>git branch xxx</td>
+<td>创建分支xxx</td>
+<td></td>
+</tr>
+<tr>
+<td>git checkout xxx</td>
+<td>切换到分支xxx</td>
+<td></td>
+</tr>
+<tr>
+<td>git checkout -b xxx</td>
+<td>创建 + 切换分支xxx</td>
+<td>相当于<code>git branch xxx</code>和<code>git checkout xxx</code></td>
+</tr>
+<tr>
+<td>git merge xxx</td>
+<td>在主分支上合并xxx分支</td>
+<td>“Fast-forward“快进模式”：直接把master指向xxx的当前提交；删除分支后，丢掉分支信息CONFLICT：产生冲突；删除分支后，保留分支信息”</td>
+</tr>
+<tr>
+<td>git branch -d xxx</td>
+<td>删除分支xxx</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>解决冲突</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git log –graph –pretty=oneline –abbrev-commit</td>
+<td>带参数的git log，查看分支合并图</td>
+<td>删除分支后，保留分支信息</td>
+</tr>
+<tr>
+<td><strong>“Fast forward”模式 no-ff</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git merge –no-ff -m “merge with no-ff” xxx</td>
+<td>合并分支xxx，–no-ff：禁用Fast-forward“快进模式”</td>
+<td>删除分支后，保留分支信息</td>
+</tr>
+<tr>
+<td><strong>5.bug分支</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git stash</td>
+<td>隐藏当前分支的工作现场</td>
+<td></td>
+</tr>
+<tr>
+<td>git stash list</td>
+<td>查看stash隐藏的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>git stash apply</td>
+<td>恢复stash隐藏内容</td>
+<td></td>
+</tr>
+<tr>
+<td>git stash drop</td>
+<td>删除stash内容</td>
+<td></td>
+</tr>
+<tr>
+<td>git stash pop</td>
+<td>恢复并删除stash隐藏内容</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>6.Github远程仓库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>创建SSH Key</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ssh-keygen -t rsa –C “youremail@example.com”</td>
+<td>创建SSH Key</td>
+<td>id_rsa是私钥，不能泄露出去;id_rsa.pub是公钥，可以放心地告诉任何人”</td>
+</tr>
+<tr>
+<td><strong>Github中添加SSH Key</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>添加远程库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>a.先创建本地git仓库，再创建github仓库，两个仓库同步</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git remote add origin <a href="https://github.com/xxx/xxx.git" target="_blank" rel="external">https://github.com/xxx/xxx.git</a></td>
+<td>添加github地址</td>
+<td></td>
+</tr>
+<tr>
+<td>git push -u origin master</td>
+<td>第一次使用时执行该命令，将本地的master分支和远程的master分支关联起来，并把将其推送到远程”</td>
+<td></td>
+</tr>
+<tr>
+<td>git push origin master</td>
+<td>将本地master分支的最新修改推送到github</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>b.先创建github仓库，再从github仓库</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git clone <a href="https://github.com/xxx/xxx" target="_blank" rel="external">https://github.com/xxx/xxx</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从开始着手搭建博客，完整的学习Git，Markdown语法，到用Hexo搭建博客成功，再到后期在原有主题的基础增加功能性和视觉上的优化，折腾了三四天，总算看倒腾出了一个看上去基本满意的博客。由于时间关系，还有很多想法没有实现，后面会不断地改进和优化。今天先来说一说学习使用Git和Github。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端工具" scheme="https://baoyuzhang.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Hexo" scheme="https://baoyuzhang.github.io/tags/Hexo/"/>
+    
+      <category term="Git" scheme="https://baoyuzhang.github.io/tags/Git/"/>
+    
+      <category term="Github" scheme="https://baoyuzhang.github.io/tags/Github/"/>
+    
+  </entry>
   
   <entry>
     <title>写在最~~~前面</title>
