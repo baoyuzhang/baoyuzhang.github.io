@@ -1,1 +1,9 @@
-测试一下，一会儿写一篇~
+#### 写在最~~~前面
+
+终于搭好了真正属于自己的小空间，心情真是不止一点的小激动！终于有个地方可以记录自己的流水账和碎碎念了！（咳咳，要打造技术博客，恩恩~）小白初入前端，希望自己可以精心奉献出满满的干货，在这里记录下自己前端的成长之路~Fighting！
+
+## 前端工具
+### Git和Github
+[【Hexo搭建独立博客全纪录】（一）使用Git和Github](https://baoyuzhang.github.io/2017/04/28/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%BD%BF%E7%94%A8Git%E5%92%8CGithub/)
+### Markdown
+[【Hexo搭建独立博客全纪录】（二）使用Markdown](https://baoyuzhang.github.io/2017/05/05/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BD%BF%E7%94%A8Markdown/)
