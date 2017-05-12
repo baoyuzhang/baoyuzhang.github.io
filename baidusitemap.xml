@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>https://baoyuzhang.github.io/2017/05/12/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-05-12T10:12:26.513Z</lastmod>
+    <data>
+        <display>
+        <title>【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客</title>
+        <pubTime>2017-05-12T01:54:06.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Github</tag>
+         
+         
+           
+             
+              <breadCrumb title="安装配置与搭建" url="https://baoyuzhang.github.io/categories/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%90%AD%E5%BB%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -39,9 +61,9 @@
         
         <tag>Hexo</tag>
          
-        <tag>Git</tag>
-         
         <tag>Github</tag>
+         
+        <tag>Git</tag>
          
          
            
