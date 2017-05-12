@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baoyuzhang.github.io/"/>
-  <updated>2017-05-12T10:12:26.513Z</updated>
+  <updated>2017-05-12T14:51:54.354Z</updated>
   <id>https://baoyuzhang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://baoyuzhang.github.io/2017/05/12/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://baoyuzhang.github.io/2017/05/12/【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客/</id>
     <published>2017-05-12T01:54:06.000Z</published>
-    <updated>2017-05-12T10:12:26.513Z</updated>
+    <updated>2017-05-12T14:51:54.354Z</updated>
     
     <content type="html"><![CDATA[<p>每周一篇的频率更新博客，今天【Hexo搭建独立博客全纪录】系列终于进入正题：使用Hexo搭建博客，我搭建博客是跟着网上的教程一步一步做的，在此基础上结合官方文档，构成本文的内容。</p>
 <a id="more"></a>
@@ -133,6 +133,8 @@
 <p><img src="/img/2017-05-12_171748.png" alt=""></p>
 <p>这时，打开<code>https://你的用户名.github.io/</code>，出现下图，则表示部署到github成功：</p>
 <p><img src="/img/2017-05-12_172010.png" alt=""></p>
+<p>再打开github仓库，已经有了内容：</p>
+<p><img src="/img/2017-05-12_215445.png" alt=""></p>
 <h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>我们自己的博客出现Hello World并不是我们想要的，那么我们来进一步配置，将它真正我们自己的博客。</p>
 <p>打开根目录下<strong>站点配置文件</strong><code>_config.yml</code>，设置如下内容：</p>
 <p><img src="/img/2017-05-12_172848.png" alt=""></p>
@@ -174,13 +176,57 @@
 <p>配置完成后，重新部署，会发现如下变化：</p>
 <p><img src="/img/2017-05-12_173441.png" alt=""></p>
 <p>但文章内容还不是我们自己的呀，下面来写我们自己的博客。</p>
-<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>执行<code>hexo new &#39;文章名&#39;</code>，hexo会帮我们在<code>..\hexo\source\_posts</code>下生成相关md文件：<br><img src="/img/2017-05-12_173830.png" alt=""></p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>执行<code>hexo new &#39;文章名&#39;</code>，hexo会帮我们在<code>..\hexo\source\_posts</code>下生成相关md文件：<br><img src="/img/2017-05-12_173830.png" alt=""></p>
 <p>打开这个文件就可以开始写博客了，默认生成如下内容：</p>
 <p><img src="/img/2017-05-12_174254.png" alt=""></p>
-<p>当然你也可以直接自己新建md文件，用这个命令的好处是帮我们自动生成了时间。删除<code>hello-world.md</code>，同时删除<code>public</code>文件夹下的<code>hello-world</code>文件夹：</p>
+<p>当然你也可以直接自己新建md文件，用这个命令的好处是帮我们自动生成了时间。一般完整格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: postName #文章页面上的显示名称，一般是中文</div><div class="line">date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</div><div class="line">categories: 默认分类 #分类</div><div class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</div><div class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</div><div class="line">---</div><div class="line"></div><div class="line">以下是正文</div></pre></td></tr></table></figure>
+<p>删除<code>hello-world.md</code>，同时删除<code>public</code>文件夹下的<code>hello-world</code>文件夹：</p>
 <p><img src="/img/2017-05-12_175327.png" alt=""></p>
 <p>将编写好的文章保存，重新生成和部署就可以啦！</p>
 <p><img src="/img/2017-05-12_175533.png" alt=""></p>
+<h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><p>假如我新建一个名字为<code>about</code>的页面：</p>
+<p><img src="/img/2017-05-12_212448.png" alt=""></p>
+<p>在source文件夹下，将生成about文件夹：</p>
+<p><img src="/img/2017-05-12_212816.png" alt=""></p>
+<p>部署后将在public文件夹生成一个新的html页面：<code>hexo\public\about\index.html</code>，通过访问<code>https://用户名.github.io/about/</code>访问这个页面：</p>
+<p><img src="/img/2017-05-12_213128.png" alt=""></p>
+<p>你可以通过编辑<code>index.html</code>，添加自己的简历等其他你想加入的内容。但注意，它是新建了一个html页面，不是文章，不会出现在博文目录。</p>
+<p>至此，博客的基本功能已经全部实现，下面的高级配置，让你更加方便快捷的写博客！</p>
+<h2 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h2><p>现在，Hexo根目录结构如下图：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── db.json</div><div class="line">├── package.json</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure></p>
+<p><img src="/img/2017-05-12_205535.png" alt=""></p>
+<p>下面介绍的几个是会经常用到的：</p>
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a><code>_config.yml</code></h3><p>网站配置信息，也就是本文所称的<strong>站点配置文件</strong>，可以在此配置大部分的参数。基本配置在前面基本已经设置过了。</p>
+<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>模版文件夹。新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
+<p>Hexo的模板是指新建的markdown文件中默认填充的内容。例如，在使用<code>hexo new 文章名</code>时，默认生成的md文件会包含如下内容：</p>
+<p><img src="/img/2017-05-12_210715.png" alt=""></p>
+<p>默认内容是哪里来的呢？就在scaffold/post.md中保存：</p>
+<p><img src="/img/2017-05-12_211000.png" alt=""></p>
+<p>假如对每篇博客我都需要添加分类<code>categories</code>，每次都手动添加太麻烦，我希望每次默认生成都有<code>categories:</code>，那么就可以在scaffold/post.md中添加：</p>
+<p><img src="/img/2017-05-12_211445.png" alt=""></p>
+<p>保存后，每次新建一篇文章时都会包含post.md中的内容。</p>
+<p>当然，你也可以在scaffolds文件夹下创建自己的博客模板，我创建一个名为<code>blog</code>的模板：</p>
+<p><img src="/img/2017-05-12_214011.png" alt=""></p>
+<p><img src="/img/2017-05-12_214203.png" alt=""></p>
+<p>通过如下命令调用我创建的blog模板新建文章：</p>
+<p><img src="/img/2017-05-12_214327.png" alt=""></p>
+<p>在<code>_posts</code>中生成md文件：</p>
+<p><img src="/img/2017-05-12_214449.png" alt=""></p>
+<p><img src="/img/2017-05-12_214617.png" alt=""></p>
+<h3 id="public"><a href="#public" class="headerlink" title="public"></a>public</h3><p>该文件夹中的内容将被最终push到github仓库中。</p>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹是存放用户资源的地方。除<code>_posts</code> 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件（如刚刚生成的about文件夹）会被拷贝到 public 文件夹。</p>
+<h4 id="为github仓库添加readme"><a href="#为github仓库添加readme" class="headerlink" title="为github仓库添加readme"></a>为github仓库添加readme</h4><p>既然 source 文件夹中的内容将全部被推送到 public 文件夹，public 文件夹中的内容又将被最终push到github仓库中，那么如果我们想要为github仓库添加readme.md，只要在 source 文件夹中创建就好了：</p>
+<p><img src="/img/2017-05-12_220101.png" alt=""></p>
+<p>部署到github，就有readme了，但我们发现，README.md已经被解析为README.html，显示的全是html代码，并不是我们想要的文档格式的内容：</p>
+<p><img src="/img/2017-05-12_220428.png" alt=""></p>
+<p>为了解决这个问题，我们回到source文件夹，将<code>README.md</code>重命名为<code>README.MDOWN</code>，再部署到github：</p>
+<p><img src="/img/2017-05-12_220814.png" alt=""></p>
+<p><img src="/img/2017-05-12_221120.png" alt=""></p>
+<p>source文件夹中，.md会被解析为html，并放到 public 文件夹被push到github，但.MDWN不会被解析。</p>
+<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>主题文件夹，下载的主题都保存在此文件夹下。Hexo 会根据主题来生成静态页面。</p>
+<p><img src="/img/2017-05-12_214937.png" alt=""></p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><a href="https://baoyutong.github.io/" target="_blank" rel="external">点击查看最终效果</a></p>
+<p>搭的这个博客只是为了写这篇文章，我<a href="https://baoyuzhang.github.io/">真正的博客</a>在这里哟！</p>
 <h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><p>常见命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #部署到GitHub</div><div class="line">hexo help  # 查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
 <p>缩写：</p>
@@ -195,7 +241,7 @@
     
     </summary>
     
-      <category term="安装配置与搭建" scheme="https://baoyuzhang.github.io/categories/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%90%AD%E5%BB%BA/"/>
+      <category term="前端工具" scheme="https://baoyuzhang.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Hexo" scheme="https://baoyuzhang.github.io/tags/Hexo/"/>
