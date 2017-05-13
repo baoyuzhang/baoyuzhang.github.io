@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baoyuzhang.github.io/"/>
-  <updated>2017-05-12T14:51:54.354Z</updated>
+  <updated>2017-05-13T06:46:16.739Z</updated>
   <id>https://baoyuzhang.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用cmd：cd命令失效</title>
+    <link href="https://baoyuzhang.github.io/2017/05/13/%E4%BD%BF%E7%94%A8cmd%EF%BC%9Acd%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/"/>
+    <id>https://baoyuzhang.github.io/2017/05/13/使用cmd：cd命令失效/</id>
+    <published>2017-05-13T06:26:49.000Z</published>
+    <updated>2017-05-13T06:46:16.739Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>使用cmd时，执行cd命令总是出现无法打开指定目录：<br><img src="/img/2017-05-13_143257.png" alt=""></p>
+<a id="more"></a>
+<h1 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h1><p>cd命令不会切换当前的盘符，只能在一个盘符内切换</p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>&lt;法一&gt; 直接输入<code>e:</code>切换盘符，在e盘中再使用cd命令打开指定目录，使用dir可以查看目录：</p>
+<p><img src="/img/2017-05-13_143953.png" alt=""></p>
+<p>&lt;法二&gt; 在cd 和目标盘符中间加一个’/d’</p>
+<p><img src="/img/2017-05-13_144401.png" alt=""></p>
+<p>或</p>
+<p><img src="/img/2017-05-13_144518.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;使用cmd时，执行cd命令总是出现无法打开指定目录：&lt;br&gt;&lt;img src=&quot;/img/2017-05-13_143257.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="那些年踩过的坑" scheme="https://baoyuzhang.github.io/categories/%E9%82%A3%E4%BA%9B%E5%B9%B4%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    
+    
+      <category term="cmd" scheme="https://baoyuzhang.github.io/tags/cmd/"/>
+    
+  </entry>
   
   <entry>
     <title>【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客</title>
