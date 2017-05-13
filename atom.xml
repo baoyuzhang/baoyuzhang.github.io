@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baoyuzhang.github.io/"/>
-  <updated>2017-05-13T07:09:41.781Z</updated>
+  <updated>2017-05-13T07:20:54.677Z</updated>
   <id>https://baoyuzhang.github.io/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="https://baoyuzhang.github.io/2017/05/13/%E4%BD%BF%E7%94%A8Node-js%E6%90%AD%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>https://baoyuzhang.github.io/2017/05/13/使用Node-js搭建Web服务器/</id>
     <published>2017-05-13T06:49:15.000Z</published>
-    <updated>2017-05-13T07:09:41.781Z</updated>
+    <updated>2017-05-13T07:20:54.677Z</updated>
     
     <content type="html"><![CDATA[<p>之前一直用过wamp，今天看到Node.js搭建Web服务器这么简单，那么就尝试一下</p>
 <p>好处：全局安装，只需更改工作路径，就可以轻松访问本地任意地址的文件夹，再也不用把代码都放在wamp指定目录www文件夹下啦</p>
 <a id="more"></a>
+<p><img src="/img/2017-05-13_1.png" alt=""></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
 <li><p>首先要保证你的电脑已经安装Node.js</p>
 <ul>
@@ -39,17 +40,17 @@
 <p><strong>注意！</strong> 第一次使用<code>nmp install http-server -g</code>安装失败，然后换了上述命令安装成功，安装成功会有绿色字显示安装路径和目录</p>
 <p><a href="https://www.npmjs.com/package/http-server" target="_blank" rel="external">http-server 官网</a></p>
 <h1 id="使用http-server"><a href="#使用http-server" class="headerlink" title="使用http-server"></a>使用http-server</h1><ol>
-<li>cmd切换工作路径</li>
-</ol>
-<p><img src="/img/2017-05-13_144518.png" alt=""></p>
-<ol>
-<li>输入<code>http-server</code></li>
-</ol>
+<li><p>&lt;法一&gt;cmd输入<code>http-server 工作路径</code></p>
 <p><img src="/img/2017-05-13_150417.png" alt=""></p>
-<ol>
-<li>打开浏览器，输入上图中给出的地址，即可使用</li>
+<p>&lt;法二&gt;cmd切换工作路径，输入<code>http-server</code></p>
+<p><img src="/img/2017-05-13_151813.png" alt=""></p>
+</li>
+<li><p>打开浏览器，输入上图中给出的地址，即可使用</p>
+</li>
 </ol>
 <p><img src="/img/2017-05-13_150717.png" alt=""></p>
+<p>回到cmd，会发现cmd会记录访问历史：</p>
+<p><img src="/img/2017-05-13_151450.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
