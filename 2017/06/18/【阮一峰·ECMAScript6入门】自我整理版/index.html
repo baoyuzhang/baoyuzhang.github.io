@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="let 和 const 命令ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。 ES6 规定暂时性死区和let、const语句不存在变量提升，主要是为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致意料之外的行为。这样的错误在 ES5 是很常见的，现在有了这种规定，避免此类错误就很容易了">
+<meta name="description" content="本文是对阮一峰《ECMAScript6入门》按照我的学习思路的重新整理，并增加了一些我自己的总结与思考，将伴随我的学习进度持续更新。">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【阮一峰·ECMAScript6入门】自我整理版">
 <meta property="og:url" content="https://baoyuzhang.github.io/2017/06/18/【阮一峰·ECMAScript6入门】自我整理版/index.html">
 <meta property="og:site_name" content="浅 茉">
-<meta property="og:description" content="let 和 const 命令ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。 ES6 规定暂时性死区和let、const语句不存在变量提升，主要是为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致意料之外的行为。这样的错误在 ES5 是很常见的，现在有了这种规定，避免此类错误就很容易了">
-<meta property="og:updated_time" content="2017-06-18T15:22:31.186Z">
+<meta property="og:description" content="本文是对阮一峰《ECMAScript6入门》按照我的学习思路的重新整理，并增加了一些我自己的总结与思考，将伴随我的学习进度持续更新。">
+<meta property="og:updated_time" content="2017-06-18T15:28:28.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【阮一峰·ECMAScript6入门】自我整理版">
-<meta name="twitter:description" content="let 和 const 命令ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。 ES6 规定暂时性死区和let、const语句不存在变量提升，主要是为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致意料之外的行为。这样的错误在 ES5 是很常见的，现在有了这种规定，避免此类错误就很容易了">
+<meta name="twitter:description" content="本文是对阮一峰《ECMAScript6入门》按照我的学习思路的重新整理，并增加了一些我自己的总结与思考，将伴随我的学习进度持续更新。">
 
 
 
@@ -404,7 +404,9 @@
       
 
       
-        <h1 id="let-和-const-命令"><a href="#let-和-const-命令" class="headerlink" title="let 和 const 命令"></a>let 和 const 命令</h1><p>ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
+        <p>本文是对阮一峰《ECMAScript6入门》按照我的学习思路的重新整理，并增加了一些我自己的总结与思考，将伴随我的学习进度持续更新。</p>
+<a id="more"></a>
+<h1 id="let-和-const-命令"><a href="#let-和-const-命令" class="headerlink" title="let 和 const 命令"></a>let 和 const 命令</h1><p>ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
 <p>ES6 规定暂时性死区和let、const语句不存在变量提升，主要是为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致意料之外的行为。这样的错误在 ES5 是很常见的，现在有了这种规定，避免此类错误就很容易了。</p>
 <h2 id="1-块级作用域"><a href="#1-块级作用域" class="headerlink" title="1.块级作用域"></a>1.块级作用域</h2><h3 id="a-没有块级作用域"><a href="#a-没有块级作用域" class="headerlink" title="a. 没有块级作用域"></a>a. 没有块级作用域</h3><p>ES5 只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。</p>
 <ol>
