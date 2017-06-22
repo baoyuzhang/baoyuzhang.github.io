@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Node.js," />
+  <meta name="keywords" content="js算法," />
 
 
 
@@ -92,19 +92,17 @@
 
 
 
-<meta name="description" content="本文整理我在学习《深入浅出Node.js》过程中的总结与思考，将伴随我的进度持续更新。">
-<meta name="keywords" content="Node.js">
+<meta name="description" content="《学习JavaScript数据结构与算法》第4章-队列。">
+<meta name="keywords" content="js算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《深入浅出Node.js》笔记">
-<meta property="og:url" content="https://baoyuzhang.github.io/2017/06/09/《深入浅出Node-js》笔记/index.html">
+<meta property="og:title" content="【JavaScript算法与数据结构】3.队列">
+<meta property="og:url" content="https://baoyuzhang.github.io/2017/06/21/【JavaScript算法与数据结构】3.队列/index.html">
 <meta property="og:site_name" content="浅 茉">
-<meta property="og:description" content="本文整理我在学习《深入浅出Node.js》过程中的总结与思考，将伴随我的进度持续更新。">
-<meta property="og:image" content="https://baoyuzhang.github.io/2017/06/09/《深入浅出Node-js》笔记/img/2017-06-09_225520.png">
-<meta property="og:updated_time" content="2017-06-22T09:35:29.943Z">
+<meta property="og:description" content="《学习JavaScript数据结构与算法》第4章-队列。">
+<meta property="og:updated_time" content="2017-06-22T09:25:53.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《深入浅出Node.js》笔记">
-<meta name="twitter:description" content="本文整理我在学习《深入浅出Node.js》过程中的总结与思考，将伴随我的进度持续更新。">
-<meta name="twitter:image" content="https://baoyuzhang.github.io/2017/06/09/《深入浅出Node-js》笔记/img/2017-06-09_225520.png">
+<meta name="twitter:title" content="【JavaScript算法与数据结构】3.队列">
+<meta name="twitter:description" content="《学习JavaScript数据结构与算法》第4章-队列。">
 
 
 
@@ -132,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://baoyuzhang.github.io/2017/06/09/《深入浅出Node-js》笔记/"/>
+  <link rel="canonical" href="https://baoyuzhang.github.io/2017/06/21/【JavaScript算法与数据结构】3.队列/"/>
 
 
 
 
 
-  <title>《深入浅出Node.js》笔记 | 浅 茉</title>
+  <title>【JavaScript算法与数据结构】3.队列 | 浅 茉</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -297,7 +295,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://baoyuzhang.github.io/2017/06/09/《深入浅出Node-js》笔记/">
+    <link itemprop="mainEntityOfPage" href="https://baoyuzhang.github.io/2017/06/21/【JavaScript算法与数据结构】3.队列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="baoyuzhang">
@@ -318,7 +316,7 @@
             
             
               
-                《深入浅出Node.js》笔记
+                【JavaScript算法与数据结构】3.队列
               
             
           </h1>
@@ -333,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-09T23:19:17+08:00">
-                2017-06-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T23:16:29+08:00">
+                2017-06-21
               </time>
             
 
@@ -356,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">Node.js</span>
+                  <a href="/categories/算法与数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">算法与数据结构</span>
                   </a>
                 </span>
 
@@ -373,7 +371,7 @@
 
           
           
-             <span id="/2017/06/09/《深入浅出Node-js》笔记/" class="leancloud_visitors" data-flag-title="《深入浅出Node.js》笔记">
+             <span id="/2017/06/21/【JavaScript算法与数据结构】3.队列/" class="leancloud_visitors" data-flag-title="【JavaScript算法与数据结构】3.队列">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,55 +404,16 @@
       
 
       
-        <p>本文整理我在学习《深入浅出Node.js》过程中的总结与思考，将伴随我的进度持续更新。</p>
+        <p>《学习JavaScript数据结构与算法》第4章-队列。</p>
 <a id="more"></a>
-<h1 id="一、Node-的特点"><a href="#一、Node-的特点" class="headerlink" title="一、Node 的特点"></a>一、Node 的特点</h1><p>单线程的Node，通过回调的方式进行异步编程，达到非阻塞的效果。</p>
-<h2 id="1-异步I-O"><a href="#1-异步I-O" class="headerlink" title="1. 异步I/O"></a>1. 异步I/O</h2><table>
-<thead>
-<tr>
-<th>—</th>
-<th>等待响应期间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>同步I/O</td>
-<td>不能做任何事，只能等待</td>
-</tr>
-<tr>
-<td>异步I/O</td>
-<td>继续做其他事</td>
-</tr>
-</tbody>
-</table>
-<p>例：读取两个文件的耗时</p>
-<ul>
-<li>同步I/O：文件1耗时 + 文件2耗时</li>
-<li>异步I/O：最长耗时（文件1，文件2）</li>
+<h1 id="三、队列【先进先出（FIFO）】"><a href="#三、队列【先进先出（FIFO）】" class="headerlink" title="三、队列【先进先出（FIFO）】"></a>三、队列【先进先出（FIFO）】</h1><p>队列：先进先出（FIFO）原则的有序集合<br><br>队头：旧元素、待删除元素<br><br>队尾：新添加元素<br></p>
+<h2 id="1-创建Queue"><a href="#1-创建Queue" class="headerlink" title="1. 创建Queue"></a>1. 创建Queue</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Queue</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> items = [];</div><div class="line"></div><div class="line">    <span class="comment">// 入队：队尾添加一个（或多个）新元素</span></div><div class="line">    <span class="keyword">this</span>.enqueue = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>)</span>&#123;</div><div class="line">        items.push(element);</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 出队：移除队头元素，返回被移除的元素</span></div><div class="line">    <span class="keyword">this</span>.dequeue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items.shift();</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 返回队头元素</span></div><div class="line">    <span class="keyword">this</span>.front = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items[<span class="number">0</span>];</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 是否为空队列</span></div><div class="line">    <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length == <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 清空队列</span></div><div class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 返回队列包含的元素个数</span></div><div class="line">    <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 打印队列</span></div><div class="line">    <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(items.toString());</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-应用"><a href="#2-应用" class="headerlink" title="2. 应用"></a>2. 应用</h2><h3 id="a-优先队列"><a href="#a-优先队列" class="headerlink" title="a.优先队列"></a>a.优先队列</h3><ul>
+<li>最小优先队列：值小的优先级高（1代表更高的优先级），值小的放在队列前</li>
+<li>最大优先队列：值大的优先级高（n代表更高的优先级），值大的放在队列前</li>
 </ul>
-<h2 id="2-事件与回调函数"><a href="#2-事件与回调函数" class="headerlink" title="2. 事件与回调函数"></a>2. 事件与回调函数</h2><p>回调：异步编程的基本方法<br><br>每个事件都绑定回调函数，代码的编写顺序与执行顺序无关。</p>
-<h2 id="3-单线程"><a href="#3-单线程" class="headerlink" title="3. 单线程"></a>3. 单线程</h2><h3 id="a-进程与线程："><a href="#a-进程与线程：" class="headerlink" title="a. 进程与线程："></a>a. 进程与线程：</h3><ul>
-<li>进程：分配资源，进程间可通信<ol>
-<li>定义：程序在一个数据集合上的一次执行</li>
-<li>组成：程序、数据、进程控制块(PCB)</li>
-<li>特点：<ul>
-<li>动态：创建进程–执行程序–撤销进程</li>
-<li>并发：可同时执行多个进程</li>
-</ul>
-</li>
-<li>性质：分配存储资源的基本单位</li>
-<li>意义：多进程使多个程序并发执行</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li>线程：独立运行<ol>
-<li>性质：分配处理机运行的基本单位</li>
-<li>意义：多线程减少程序并发执行的时间空间开销</li>
-</ol>
-</li>
-</ul>
-<p><img src="./img/2017-06-09_225520.png" alt=""></p>
+<p>&lt;法一&gt;设置优先级，然后在正确的位置添加元素<br><br>&lt;法二&gt;用入列操作添加元素，然后按照优先级移除它们<br><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 最小优先队列：值小的优先级高（1代表更高的优先级），值小的放在队列前</span></div><div class="line"><span class="comment">// 设置优先级，然后在正确的位置添加元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">PriorityQueue</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> items = [];</div><div class="line"></div><div class="line">    <span class="comment">// 创建带有优先级的元素</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">QueueElement</span> (<span class="params">element, priority</span>)</span>&#123; <span class="comment">// &#123;1&#125;</span></div><div class="line">        <span class="keyword">this</span>.element = element;</div><div class="line">        <span class="keyword">this</span>.priority = priority;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.enqueue = <span class="function"><span class="keyword">function</span>(<span class="params">element, priority</span>)</span>&#123;</div><div class="line">        <span class="keyword">let</span> queueElement = <span class="keyword">new</span> QueueElement(element, priority);</div><div class="line"></div><div class="line">        <span class="keyword">let</span> added = <span class="literal">false</span>;</div><div class="line">        <span class="comment">// 循环遍历，遇到priority值更大（优先级更低）的项时，插入它之前，并终止队列循环</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;items.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span> (queueElement.priority &lt; items[i].priority)&#123; <span class="comment">// &#123;2&#125;查找</span></div><div class="line">                items.splice(i,<span class="number">0</span>,queueElement);             <span class="comment">// &#123;3&#125;插入</span></div><div class="line">                added = <span class="literal">true</span>;</div><div class="line">                <span class="keyword">break</span>; <span class="comment">// &#123;4&#125;终止</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 若大于任何已有元素，直接添加到队尾</span></div><div class="line">        <span class="keyword">if</span> (!added)&#123;</div><div class="line">            items.push(queueElement); <span class="comment">//&#123;5&#125;</span></div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="comment">//其他方法和默认的Queue实现相同</span></div><div class="line">    <span class="keyword">this</span>.dequeue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items.shift();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.front = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items[<span class="number">0</span>];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length == <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;items.length; i++)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;items[i].element&#125;</span>  - <span class="subst">$&#123;items[i].priority&#125;</span>`</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> priorityQueue = <span class="keyword">new</span> PriorityQueue();</div><div class="line">priorityQueue.enqueue(<span class="string">"John"</span>, <span class="number">2</span>);</div><div class="line">priorityQueue.enqueue(<span class="string">"Jack"</span>, <span class="number">1</span>);</div><div class="line">priorityQueue.enqueue(<span class="string">"Camila"</span>, <span class="number">1</span>);</div><div class="line">priorityQueue.print();</div></pre></td></tr></table></figure></p>
+<h3 id="b-循环队列-——-击鼓传花"><a href="#b-循环队列-——-击鼓传花" class="headerlink" title="b.循环队列 —— 击鼓传花"></a>b.循环队列 —— 击鼓传花</h3><p>规则：击鼓传花游戏（Hot<br>Potato）中，孩子们围成一个圆圈，把花尽快地传递给旁边的人。某一时刻传花停止，<br>这个时候花在谁手里，谁就退出圆圈结束游戏。重复这个过程，直到只剩一个孩子（胜者）。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hotPotato</span> (<span class="params">nameList, num</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> Queue();</div><div class="line"></div><div class="line">    <span class="comment">// 得到一份名单，把里面的名字全都加入队列</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;nameList.length; i++)&#123;</div><div class="line">        queue.enqueue(nameList[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> eliminated = <span class="string">''</span>;</div><div class="line">    <span class="keyword">while</span> (queue.size() &gt; <span class="number">1</span>)&#123;</div><div class="line">        <span class="comment">// 如果你把花传给了旁边的人，你被淘汰的威胁立刻就解除了</span></div><div class="line">        <span class="comment">// （从队列开头移除一项，再将其添加到队列末尾）</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;num; i++)&#123;</div><div class="line">            queue.enqueue(queue.dequeue());</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 一旦传递次数达到给定的数字，拿着花的那个人就被淘汰了</span></div><div class="line">        <span class="comment">// （传递次数达到给定的数字，元素出队）</span></div><div class="line">        eliminated = queue.dequeue();</div><div class="line">        <span class="built_in">console</span>.log(eliminated + <span class="string">' was eliminated from the Hot Potato game.'</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 最后只剩下一个人的时候，这个人就是胜者</span></div><div class="line">    <span class="keyword">return</span> queue.dequeue();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> names = [<span class="string">'John'</span>,<span class="string">'Jack'</span>,<span class="string">'Camila'</span>,<span class="string">'Ingrid'</span>,<span class="string">'Carl'</span>];</div><div class="line"><span class="keyword">let</span> winner = hotPotato(names, <span class="number">7</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'The winner is: '</span> + winner);</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -516,7 +475,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Node-js/" <i class="fa fa-tag"></i> Node.js</a>
+            <a href="/tags/js算法/" <i class="fa fa-tag"></i> js算法</a>
           
         </div>
       
@@ -529,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/18/【阮一峰·ECMAScript6入门】let 和 const 命令/" rel="next" title="【阮一峰·ECMAScript6入门】let 和 const 命令">
-                <i class="fa fa-chevron-left"></i> 【阮一峰·ECMAScript6入门】let 和 const 命令
+              <a href="/2017/06/22/【JavaScript算法与数据结构】4.链表/" rel="next" title="【JavaScript算法与数据结构】4.链表">
+                <i class="fa fa-chevron-left"></i> 【JavaScript算法与数据结构】4.链表
               </a>
             
           </div>
@@ -539,8 +498,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/08/node.js更新/" rel="prev" title="Node.js常用命令">
-                Node.js常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/21/【JavaScript算法与数据结构】2.栈/" rel="prev" title="【JavaScript算法与数据结构】2.栈">
+                【JavaScript算法与数据结构】2.栈 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -724,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、Node-的特点"><span class="nav-number">1.</span> <span class="nav-text">一、Node 的特点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-异步I-O"><span class="nav-number">1.1.</span> <span class="nav-text">1. 异步I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-事件与回调函数"><span class="nav-number">1.2.</span> <span class="nav-text">2. 事件与回调函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单线程"><span class="nav-number">1.3.</span> <span class="nav-text">3. 单线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-进程与线程："><span class="nav-number">1.3.1.</span> <span class="nav-text">a. 进程与线程：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#三、队列【先进先出（FIFO）】"><span class="nav-number">1.</span> <span class="nav-text">三、队列【先进先出（FIFO）】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建Queue"><span class="nav-number">1.1.</span> <span class="nav-text">1. 创建Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-应用"><span class="nav-number">1.2.</span> <span class="nav-text">2. 应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-优先队列"><span class="nav-number">1.2.1.</span> <span class="nav-text">a.优先队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-循环队列-——-击鼓传花"><span class="nav-number">1.2.2.</span> <span class="nav-text">b.循环队列 —— 击鼓传花</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
