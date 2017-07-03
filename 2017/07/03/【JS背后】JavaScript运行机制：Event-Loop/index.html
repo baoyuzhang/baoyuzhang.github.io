@@ -101,7 +101,7 @@
 <meta property="og:description" content="JS背后的运行原理是很多JS的书上都没有提及的，因此一直似懂非懂，今天专门搜了很多相关的博客来看，在这里总结记录一下。 本文主要讲解JS的线程和事件循环问题，捎带提一下浏览器线程：  一、JavaScript的单线程 为什么JavaScript是单线程？ 任务队列 回调函数 事件循环Event Loop 定时器   二、Node.js的Event Loop 三、浏览器线程 参考资料">
 <meta property="og:image" content="https://baoyuzhang.github.io/img/2017-07-03-1.png">
 <meta property="og:image" content="https://baoyuzhang.github.io/img/2017-07-03-2.png">
-<meta property="og:updated_time" content="2017-07-03T09:16:44.128Z">
+<meta property="og:updated_time" content="2017-07-03T09:19:48.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【JS背后】JavaScript 运行机制：事件循环Event Loop">
 <meta name="twitter:description" content="JS背后的运行原理是很多JS的书上都没有提及的，因此一直似懂非懂，今天专门搜了很多相关的博客来看，在这里总结记录一下。 本文主要讲解JS的线程和事件循环问题，捎带提一下浏览器线程：  一、JavaScript的单线程 为什么JavaScript是单线程？ 任务队列 回调函数 事件循环Event Loop 定时器   二、Node.js的Event Loop 三、浏览器线程 参考资料">
@@ -461,7 +461,7 @@
 <h2 id="4-事件循环Event-Loop"><a href="#4-事件循环Event-Loop" class="headerlink" title="4. 事件循环Event Loop"></a>4. 事件循环Event Loop</h2><p>事件循环Event Loop：主线程从”任务队列”中读取事件，这个过程循环不断</p>
 <p><strong>执行栈中的代码（同步任务），总是在读取”任务队列”（异步任务）之前执行。</strong></p>
 <p><img src="/img/2017-07-03-1.png" alt=""></p>
-<p>主线程运行的时候，产生<a href="/【JS背后】JavaScript中的堆栈">堆（heap）和栈（stack）</a>：</p>
+<p>主线程运行的时候，产生<a href="https://baoyuzhang.github.io/2017/07/03/%E3%80%90JS%E8%83%8C%E5%90%8E%E3%80%91JavaScript%E4%B8%AD%E7%9A%84%E5%A0%86%E6%A0%88/">堆（heap）和栈（stack）</a>：</p>
 <ul>
 <li>执行栈中的代码调用各种外部API，产生各种异步任务（click，load，done）加入”任务队列”；</li>
 <li>只要栈中的代码执行完毕，主线程就会去读取”任务队列”，依次执行那些事件所对应的回调函数。</li>
