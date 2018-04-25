@@ -4,6 +4,41 @@
 
     
   <url>
+    <loc>https://baoyuzhang.github.io/2018/04/25/%E4%BB%8A%E5%A4%A9%E8%B5%B7%EF%BC%8C%E6%AD%A3%E5%BC%8F%E5%9B%9E%E5%BD%92%E5%8D%9A%E5%AE%A2%E5%95%A6%EF%BC%81/</loc>
+    <lastmod>2018-04-25T08:45:03.691Z</lastmod>
+    <data>
+        <display>
+        <title>今天起，正式回归博客啦！</title>
+        <pubTime>2018-04-25T08:20:05.000Z</pubTime>
+        
+        <tag>碎碎念</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://baoyuzhang.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://baoyuzhang.github.io/2017/09/13/%E3%80%90%E9%98%AE%E4%B8%80%E5%B3%B0%C2%B7ECMAScript6%E5%85%A5%E9%97%A8%E3%80%91%E8%87%AA%E6%88%91%E6%95%B4%E7%90%86%E7%89%88/</loc>
+    <lastmod>2017-09-13T02:11:03.086Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2017-09-13T02:11:03.086Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://baoyuzhang.github.io/2017/07/03/%E3%80%90JS%E8%83%8C%E5%90%8E%E3%80%91JavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%EF%BC%9AEvent-Loop/</loc>
     <lastmod>2017-07-03T09:19:48.941Z</lastmod>
     <data>
@@ -425,9 +460,9 @@
         
         <tag>Hexo</tag>
          
-        <tag>Git</tag>
-         
         <tag>Github</tag>
+         
+        <tag>Git</tag>
          
          
            
