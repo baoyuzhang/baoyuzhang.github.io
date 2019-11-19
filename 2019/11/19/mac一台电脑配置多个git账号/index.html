@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Git,Github," />
 
 
 
@@ -92,14 +92,21 @@
 
 
 
-<meta name="description" content="每一个不曾起舞的日子都是对生命的辜负">
-<meta property="og:type" content="website">
-<meta property="og:title" content="浅 茉">
-<meta property="og:url" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;archives&#x2F;index.html">
+<meta name="description" content="工作环境使用gitlab账号，个人学习或参与开源项目需要使用github账号。默认情况下，一台电脑的Git只对应一个账户。本文教你在一个Git终端中配置多个账户，同时管理多个托管网站的代码。">
+<meta name="keywords" content="Git,Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac一台电脑配置多个git账号">
+<meta property="og:url" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7&#x2F;index.html">
 <meta property="og:site_name" content="浅 茉">
-<meta property="og:description" content="每一个不曾起舞的日子都是对生命的辜负">
+<meta property="og:description" content="工作环境使用gitlab账号，个人学习或参与开源项目需要使用github账号。默认情况下，一台电脑的Git只对应一个账户。本文教你在一个Git终端中配置多个账户，同时管理多个托管网站的代码。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7&#x2F;1.查看已配置的git列表.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7&#x2F;2.&amp;#32;生成github&amp;#32;SSH&amp;#32;key.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7&#x2F;3.&amp;#32;添加到ssh-agent信任列表.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7&#x2F;6.连接测试.png">
+<meta property="og:updated_time" content="2019-11-19T12:15:37.323Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7&#x2F;1.查看已配置的git列表.png">
 
 
 
@@ -127,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://baoyuzhang.github.io/archives/"/>
+  <link rel="canonical" href="https://baoyuzhang.github.io/2019/11/19/mac一台电脑配置多个git账号/"/>
 
 
 
 
 
-  <title>归档 | 浅 茉</title>
+  <title>mac一台电脑配置多个git账号 | 浅 茉</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -168,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -282,219 +289,276 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 5 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/19/mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7/" itemprop="url">
-              
-                <span itemprop="name">mac一台电脑配置多个git账号</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-19T17:37:46+08:00"
-              content="2019-11-19" >
-          11-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">
-              
-                <span itemprop="name">正则表达式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-19T19:42:10+08:00"
-              content="2017-05-19" >
-          05-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/12/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-              
-                <span itemprop="name">【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-12T09:54:06+08:00"
-              content="2017-05-12" >
-          05-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/05/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BD%BF%E7%94%A8Markdown/" itemprop="url">
-              
-                <span itemprop="name">【Hexo搭建独立博客全纪录】（二）使用Markdown</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-05T09:48:33+08:00"
-              content="2017-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/28/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%BD%BF%E7%94%A8Git%E5%92%8CGithub/" itemprop="url">
-              
-                <span itemprop="name">【Hexo搭建独立博客全纪录】（一）使用Git和Github</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-28T10:57:39+08:00"
-              content="2017-04-28" >
-          04-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://baoyuzhang.github.io/2019/11/19/mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="baoyuzhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浅 茉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                mac一台电脑配置多个git账号
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T17:37:46+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">前端工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/11/19/mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7/" class="leancloud_visitors" data-flag-title="mac一台电脑配置多个git账号">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i> 阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>工作环境使用gitlab账号，个人学习或参与开源项目需要使用github账号。默认情况下，一台电脑的Git只对应一个账户。本文教你在一个Git终端中配置多个账户，同时管理多个托管网站的代码。</p>
+<a id="more"></a>
+<p>参考资料<br><a href="https://www.jianshu.com/p/698f82e72415" target="_blank" rel="noopener">https://www.jianshu.com/p/698f82e72415</a><br><a href="https://segmentfault.com/a/1190000016269686" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016269686</a></p>
+<h2 id="1-查看已配置的git列表"><a href="#1-查看已配置的git列表" class="headerlink" title="1. 查看已配置的git列表"></a>1. 查看已配置的git列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<p>已有公司的ssh-key<br><img src="1.查看已配置的git列表.png" alt="1.查看已配置的git列表"></p>
+<h2 id="2-生成github-SSH-key"><a href="#2-生成github-SSH-key" class="headerlink" title="2. 生成github SSH key"></a>2. 生成github SSH key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C <span class="string">"baoyuzhang@126.com"</span></span><br></pre></td></tr></table></figure>
+<p><img src="2.&#32;生成github&#32;SSH&#32;key.png" alt="2. 生成github SSH key"></p>
+<h2 id="3-添加到ssh-agent信任列表"><a href="#3-添加到ssh-agent信任列表" class="headerlink" title="3. 添加到ssh-agent信任列表"></a>3. 添加到ssh-agent信任列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
+<p><img src="3.&#32;添加到ssh-agent信任列表.png" alt="3. 添加到ssh-agent信任列表"></p>
+<p>为了检验本地是否添加成功，可以使用<code>ssh-add -l</code>命令进行查看</p>
+<h2 id="4-添加公钥到你的github"><a href="#4-添加公钥到你的github" class="headerlink" title="4. 添加公钥到你的github"></a>4. 添加公钥到你的github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~/.ssh/id_rsa_github.pub</span><br></pre></td></tr></table></figure>
+<h2 id="5-在config文件配置多个ssh-key"><a href="#5-在config文件配置多个ssh-key" class="headerlink" title="5. 在config文件配置多个ssh-key"></a>5. 在config文件配置多个ssh-key</h2><p>打开目录，看看有没有config文件，没有的话新建一个</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open ~/.ssh/</span><br></pre></td></tr></table></figure>
+<p>分别配置公司和自己的ssh-key</p>
+<table>
+<thead>
+<tr>
+<th>键</th>
+<th>值</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>主机</td>
+<td>随意写，有点关联就行了</td>
+</tr>
+<tr>
+<td>Hostname</td>
+<td>主机名</td>
+<td>公司gitlab域名，必须写正确</td>
+</tr>
+<tr>
+<td>IdentityFile</td>
+<td>身份文件</td>
+<td>rsa具体路径地址</td>
+</tr>
+<tr>
+<td>User</td>
+<td>用户</td>
+<td>可随意写，建议使用Host的前面部分，后面具体clone操作都会用到这个user</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#公司</span></span><br><span class="line">Host company</span><br><span class="line">Hostname <span class="comment">#公司gitlab域名#</span></span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">User company</span><br><span class="line">  </span><br><span class="line"><span class="comment">#个人</span></span><br><span class="line">Host github</span><br><span class="line">Hostname github.com</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_github</span><br><span class="line">User github</span><br></pre></td></tr></table></figure>
+<h2 id="6-连接测试"><a href="#6-连接测试" class="headerlink" title="6. 连接测试"></a>6. 连接测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T <span class="comment">#公司gitlab域名#</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p><img src="6.连接测试.png" alt="6.连接测试"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-qcode.jpg" alt="baoyuzhang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-qcode.jpg" alt="baoyuzhang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------本文结束<i class="fa fa-paw"></i>感谢阅读------</div>
+    
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" <i class="fa fa-tag"></i> Git</a>
+          
+            <a href="/tags/Github/" <i class="fa fa-tag"></i> Github</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -502,6 +566,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -521,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -638,6 +715,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-查看已配置的git列表"><span class="nav-number">1.</span> <span class="nav-text">1. 查看已配置的git列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-生成github-SSH-key"><span class="nav-number">2.</span> <span class="nav-text">2. 生成github SSH key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加到ssh-agent信任列表"><span class="nav-number">3.</span> <span class="nav-text">3. 添加到ssh-agent信任列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-添加公钥到你的github"><span class="nav-number">4.</span> <span class="nav-text">4. 添加公钥到你的github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-在config文件配置多个ssh-key"><span class="nav-number">5.</span> <span class="nav-text">5. 在config文件配置多个ssh-key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-连接测试"><span class="nav-number">6.</span> <span class="nav-text">6. 连接测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -776,11 +869,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
