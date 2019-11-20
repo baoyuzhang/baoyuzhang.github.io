@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baoyuzhang.github.io/"/>
-  <updated>2019-11-19T12:15:37.323Z</updated>
+  <updated>2019-11-20T07:24:01.713Z</updated>
   <id>https://baoyuzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git config配置不同用户信息</title>
+    <link href="https://baoyuzhang.github.io/2019/11/20/git-config%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF/"/>
+    <id>https://baoyuzhang.github.io/2019/11/20/git-config配置不同用户信息/</id>
+    <published>2019-11-20T07:11:24.000Z</published>
+    <updated>2019-11-20T07:24:01.713Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文介绍git的三个配置文件，以及不同仓库使用不同用户信息的方法。</p><a id="more"></a><h2 id="git的配置文件"><a href="#git的配置文件" class="headerlink" title="git的配置文件"></a>git的配置文件</h2><p>git通过配置文件来设置控制 Git 外观和行为，共有三个配置文件，权重为仓库级&gt;全局级&gt;系统级：</p><ol><li>系统级<code>--system</code>：/etc/gitconfig 文件，包含系统上每一个用户及他们仓库的通用配置；</li><li>全局级<code>--global</code>：~/.gitconfig 或 ~/.config/git/config 文件，只针对当前用户；</li><li>仓库级<code>--local</code>：.git/config，当前仓库的Git 目录中的 config 文件（就是 ）。</li></ol><h2 id="不同仓库使用不同用户信息"><a href="#不同仓库使用不同用户信息" class="headerlink" title="不同仓库使用不同用户信息"></a>不同仓库使用不同用户信息</h2><p>初次安装git时，曾执行如下命令设置你的用户名与邮件地址：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure><p>因为使用了 –global 选项，无论你在该系统上做任何事情， Git 都会使用这些信息。这些信息会写入到你的每一次提交中，且不可更改。工作电脑通常会全局配置公司邮箱和用户名，那么当提交到个人github时，也会使用公司邮箱和用户名。</p><p>我们想要的是提交个人github仓库使用个人用户名和邮箱，以下方法任选其一：</p><p>&lt;方法一&gt;如下命令可修改仓库级配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">"John Doe"</span></span><br><span class="line">git config user.email johndoe@example.com</span><br></pre></td></tr></table></figure><p>&lt;方法二&gt;打开仓库级配置文件修改：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open .git/config</span><br></pre></td></tr></table></figure><p><img src="打开仓库级配置文件修改.png" alt="打开仓库级配置文件修改"></p><p>完成后，再提交代码，<code>git log</code>查看提交信息，就会看到个人信息配置成功：<br><img src="git&#32;log.png" alt="git log"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文介绍git的三个配置文件，以及不同仓库使用不同用户信息的方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>mac一台电脑配置多个git账号</title>
