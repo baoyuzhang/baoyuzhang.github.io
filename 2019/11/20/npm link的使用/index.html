@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="npm," />
 
 
 
@@ -92,14 +92,21 @@
 
 
 
-<meta name="description" content="每一个不曾起舞的日子都是对生命的辜负">
-<meta property="og:type" content="website">
-<meta property="og:title" content="浅 茉">
-<meta property="og:url" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+<meta name="description" content="问题：开源项目多人共同开发，我开发的模块是一个单独的npm包，想要在自己的项目中直接引用开发中的模块进行调试和测试。 解决方法： npm link">
+<meta name="keywords" content="npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm link的使用">
+<meta property="og:url" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="浅 茉">
-<meta property="og:description" content="每一个不曾起舞的日子都是对生命的辜负">
+<meta property="og:description" content="问题：开源项目多人共同开发，我开发的模块是一个单独的npm包，想要在自己的项目中直接引用开发中的模块进行调试和测试。 解决方法： npm link">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8&#x2F;1.开发模块npm&amp;#32;link.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8&#x2F;2.全局node_modules.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8&#x2F;3.个人测试项目中引入链接.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8&#x2F;4.个人测试项目中查看.png">
+<meta property="og:updated_time" content="2019-11-21T08:49:42.087Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;baoyuzhang.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8&#x2F;1.开发模块npm&amp;#32;link.png">
 
 
 
@@ -127,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://baoyuzhang.github.io/archives/2019/11/"/>
+  <link rel="canonical" href="https://baoyuzhang.github.io/2019/11/20/npm link的使用/"/>
 
 
 
 
 
-  <title>归档 | 浅 茉</title>
+  <title>npm link的使用 | 浅 茉</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -168,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -282,140 +289,238 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 7 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/20/npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url">
-              
-                <span itemprop="name">npm link的使用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-20T18:17:38+08:00"
-              content="2019-11-20" >
-          11-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/20/git-config%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF/" itemprop="url">
-              
-                <span itemprop="name">git config配置不同用户信息</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-20T15:11:24+08:00"
-              content="2019-11-20" >
-          11-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/19/mac%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E8%B4%A6%E5%8F%B7/" itemprop="url">
-              
-                <span itemprop="name">mac一台电脑配置多个git账号</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-19T17:37:46+08:00"
-              content="2019-11-19" >
-          11-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://baoyuzhang.github.io/2019/11/20/npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="baoyuzhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浅 茉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                npm link的使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-20T18:17:38+08:00">
+                2019-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">前端工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/11/20/npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8/" class="leancloud_visitors" data-flag-title="npm link的使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i> 阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>问题：开源项目多人共同开发，我开发的模块是一个单独的npm包，想要在自己的项目中直接引用开发中的模块进行调试和测试。</li>
+<li>解决方法： npm link</li>
+</ul>
+<a id="more"></a>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://docs.npmjs.com/cli/link.html" target="_blank" rel="noopener">npm官网·npm-link</a><br><a href="https://www.cnblogs.com/pqjwyn/p/9626335.html" target="_blank" rel="noopener">博客·npm link中文文档</a><br><a href="https://www.jianshu.com/p/aaa7db89a5b2" target="_blank" rel="noopener">简书·npm link的使用</a></p>
+<h2 id="一、在全局环境的node-modules中，创建开发中的模块链接"><a href="#一、在全局环境的node-modules中，创建开发中的模块链接" class="headerlink" title="一、在全局环境的node_modules中，创建开发中的模块链接"></a>一、在全局环境的node_modules中，创建开发中的模块链接</h2><p>此时github上的项目已经fork并clone到本地，切换到开发分支，在要开发的模块<code>uform/packages/react-schema-renderer</code>下，执行<code>npm link</code>。</p>
+<p>这一步会以package.json中的name，在全局的node_modules中创建本地模块的链接，打开全局node_modules，会看到该链接：</p>
+<p><img src="1.开发模块npm&#32;link.png" alt="开发模块npm link"></p>
+<p><img src="2.全局node_modules.png" alt="全局node_modules"></p>
+<h2 id="二、在自己的测试项目中引用链接"><a href="#二、在自己的测试项目中引用链接" class="headerlink" title="二、在自己的测试项目中引用链接"></a>二、在自己的测试项目中引用链接</h2><p>在自己的项目中，执行<code>npm link @uform/react-schema-renderer</code></p>
+<p><img src="3.个人测试项目中引入链接.png" alt="个人测试项目中引入链接"></p>
+<p>这一步会将上一步全局环境中创建的链接引入测试项目中，打开测试项目的node_modules可以看到该链接：</p>
+<p><img src="4.个人测试项目中查看.png" alt="个人测试项目中查看"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-qcode.jpg" alt="baoyuzhang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-qcode.jpg" alt="baoyuzhang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------本文结束<i class="fa fa-paw"></i>感谢阅读------</div>
+    
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/npm/" <i class="fa fa-tag"></i> npm</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/20/git-config%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF/" rel="next" title="git config配置不同用户信息">
+                <i class="fa fa-chevron-left"></i> git config配置不同用户信息
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -423,6 +528,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -442,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -559,6 +677,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、在全局环境的node-modules中，创建开发中的模块链接"><span class="nav-number">2.</span> <span class="nav-text">一、在全局环境的node_modules中，创建开发中的模块链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、在自己的测试项目中引用链接"><span class="nav-number">3.</span> <span class="nav-text">二、在自己的测试项目中引用链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -697,11 +831,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baoyuzhang.github.io/"/>
-  <updated>2019-11-20T07:46:44.203Z</updated>
+  <updated>2019-11-21T08:49:42.087Z</updated>
   <id>https://baoyuzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm link的使用</title>
+    <link href="https://baoyuzhang.github.io/2019/11/20/npm%20link%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://baoyuzhang.github.io/2019/11/20/npm link的使用/</id>
+    <published>2019-11-20T10:17:38.000Z</published>
+    <updated>2019-11-21T08:49:42.087Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>问题：开源项目多人共同开发，我开发的模块是一个单独的npm包，想要在自己的项目中直接引用开发中的模块进行调试和测试。</li><li>解决方法： npm link</li></ul><a id="more"></a><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://docs.npmjs.com/cli/link.html" target="_blank" rel="noopener">npm官网·npm-link</a><br><a href="https://www.cnblogs.com/pqjwyn/p/9626335.html" target="_blank" rel="noopener">博客·npm link中文文档</a><br><a href="https://www.jianshu.com/p/aaa7db89a5b2" target="_blank" rel="noopener">简书·npm link的使用</a></p><h2 id="一、在全局环境的node-modules中，创建开发中的模块链接"><a href="#一、在全局环境的node-modules中，创建开发中的模块链接" class="headerlink" title="一、在全局环境的node_modules中，创建开发中的模块链接"></a>一、在全局环境的node_modules中，创建开发中的模块链接</h2><p>此时github上的项目已经fork并clone到本地，切换到开发分支，在要开发的模块<code>uform/packages/react-schema-renderer</code>下，执行<code>npm link</code>。</p><p>这一步会以package.json中的name，在全局的node_modules中创建本地模块的链接，打开全局node_modules，会看到该链接：</p><p><img src="1.开发模块npm&#32;link.png" alt="开发模块npm link"></p><p><img src="2.全局node_modules.png" alt="全局node_modules"></p><h2 id="二、在自己的测试项目中引用链接"><a href="#二、在自己的测试项目中引用链接" class="headerlink" title="二、在自己的测试项目中引用链接"></a>二、在自己的测试项目中引用链接</h2><p>在自己的项目中，执行<code>npm link @uform/react-schema-renderer</code></p><p><img src="3.个人测试项目中引入链接.png" alt="个人测试项目中引入链接"></p><p>这一步会将上一步全局环境中创建的链接引入测试项目中，打开测试项目的node_modules可以看到该链接：</p><p><img src="4.个人测试项目中查看.png" alt="个人测试项目中查看"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;问题：开源项目多人共同开发，我开发的模块是一个单独的npm包，想要在自己的项目中直接引用开发中的模块进行调试和测试。&lt;/li&gt;
+&lt;li&gt;解决方法： npm link&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端工具" scheme="https://baoyuzhang.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="npm" scheme="https://baoyuzhang.github.io/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>git config配置不同用户信息</title>
